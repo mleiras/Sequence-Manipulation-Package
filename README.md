@@ -5,7 +5,7 @@ The Sequence Manipulation package constitutes a set of classes and functions for
 - Alexandre Esperança *pg45963*
 - Cristiana Albuquerque *pg45468*
 - Maria Couto *pg44380*
-- Mónica Leiras *pg45473*
+- Mónica Leiras *pg45473*\
 University of Minho, Bioinformatics (Master) 2021/2022
 
 ## What can be found in this package?
@@ -26,8 +26,7 @@ This package contains the following classes:
 The features of each class will be addressed in the next sections, along with usage examples.
 
 ### Class Sequence
-The class Sequence provides a set of sequence features, such as the type of sequence (DNA, RNA or amino acid) and its elements. Besides, it allows the transformation of DNA to RNA sequences, determination of the complement inverse of a sequence and complementary DNA, open reading frames, codons and respective amino acids and proteins generated.
-**The parameters are:**
+The class Sequence provides a set of sequence features, such as the type of sequence (DNA, RNA or amino acid) and its elements. Besides, it allows the transformation of DNA to RNA sequences, determination of the complement inverse of a sequence and complementary DNA, open reading frames, codons and respective amino acids and proteins generated. The parameters are:
 - seq: sequence.
 
 ##### Usage Example
