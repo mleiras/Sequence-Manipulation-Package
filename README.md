@@ -2,10 +2,10 @@
 The Sequence Manipulation package constitutes a set of classes and functions for biological sequences manipulation available for Python.
 
 ## Authors
-Alexandre Esperança pg45963
-Cristiana Albuquerque pg45468
-Maria Couto pg44380
-Mónica Leiras pg45473
+- Alexandre Esperança *pg45963*
+- Cristiana Albuquerque *pg45468*
+- Maria Couto *pg44380*
+- Mónica Leiras *pg45473*
 University of Minho, Bioinformatics (Master) 2021/2022
 
 ## What can be found in this package?
@@ -78,21 +78,21 @@ This section is represented by 4 classes that may interact with each other. The 
 - hits: coordinates of query subsequences in the query and sequence.
 
 2. The **class SimpleBlast** records all the sequences to analyze and returns the respective hits and matches for the query and each sequence. The parameters are:
-● list_seqs: list of sequences;
-● w: size of the subsequences;
-● seq: sequence;
-● query: query sequence.
+- list_seqs: list of sequences;
+- w: size of the subsequences;
+- seq: sequence;
+- query: query sequence.
 
 3. The **class SimpleBlastHit** records all the hits for a given sequence, query and subsequence (w). The parameters are:
-● seq: sequence;
-● query: query sequence;
-● w: size of the subsequences.
+- seq: sequence;
+- query: query sequence;
+- w: size of the subsequences.
 
 4. The **class SimpleBlastMatch** records all the matches for a given sequence, query, hits and subsequences. The parameters are:
-● seq: sequence;
-● query: query sequence;
-● hits: coordinates of query subsequences;
-● w: size of the subsequences.
+- seq: sequence;
+- query: query sequence;
+- hits: coordinates of query subsequences;
+- w: size of the subsequences.
 
 
 ##### Usage Example
