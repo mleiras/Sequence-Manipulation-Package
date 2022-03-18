@@ -1,0 +1,190 @@
+\hypertarget{class_motifs_1_1_motifs}{}\doxysection{Motifs.\+Motifs Class Reference}
+\label{class_motifs_1_1_motifs}\index{Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_motifs_1_1_motifs_afdc227a9075e13a837df300cfb3695be}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, list list\+\_\+seq, $\ast$$\ast$kwargs)
+\item 
+str \mbox{\hyperlink{class_motifs_1_1_motifs_ab0d2bdc9fe55b2f1d1814896f9fde2db}{validate\+\_\+seq}} (self, str seq)
+\item 
+str \mbox{\hyperlink{class_motifs_1_1_motifs_a4391ddc80174d19c6844c7543d515501}{validate\+\_\+abc}} (self)
+\item 
+repr \mbox{\hyperlink{class_motifs_1_1_motifs_a98b394cc2eaf2402ee6a6b23b5e0e977}{print\+\_\+profile}} (self, list profile)
+\item 
+list \mbox{\hyperlink{class_motifs_1_1_motifs_a7e77190f9255d68430601f35a7ae8f73}{create\+\_\+profile}} (self)
+\item 
+float \mbox{\hyperlink{class_motifs_1_1_motifs_a7664329b2021b327e17106c43ee2ca6d}{prob\+\_\+seq}} (self, str seq, list profile)
+\item 
+str \mbox{\hyperlink{class_motifs_1_1_motifs_afbee5cee6f3cea2a43bbaadc15c24c7b}{seq\+\_\+most\+\_\+probable}} (self, str seq, list profile)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_motifs_1_1_motifs_af279e61241e913b3892b81ef5644a02a}\label{class_motifs_1_1_motifs_af279e61241e913b3892b81ef5644a02a}} 
+{\bfseries list\+\_\+seq}
+\item 
+\mbox{\Hypertarget{class_motifs_1_1_motifs_a7c0b70b60eb33e897a1e297ca18cee5a}\label{class_motifs_1_1_motifs_a7c0b70b60eb33e897a1e297ca18cee5a}} 
+{\bfseries abc}
+\item 
+\mbox{\Hypertarget{class_motifs_1_1_motifs_af703b2de0459faec636d7a1223aaf085}\label{class_motifs_1_1_motifs_af703b2de0459faec636d7a1223aaf085}} 
+{\bfseries profile}
+\item 
+\mbox{\Hypertarget{class_motifs_1_1_motifs_a5055ed909ec7fd1e4eac5b80818d13c9}\label{class_motifs_1_1_motifs_a5055ed909ec7fd1e4eac5b80818d13c9}} 
+{\bfseries pseudo}
+\item 
+\mbox{\Hypertarget{class_motifs_1_1_motifs_a6334ccc35e32f35552c245ef4dfe9a66}\label{class_motifs_1_1_motifs_a6334ccc35e32f35552c245ef4dfe9a66}} 
+{\bfseries n}
+\item 
+\mbox{\Hypertarget{class_motifs_1_1_motifs_a86f673db1a64324ffec360caa9219e70}\label{class_motifs_1_1_motifs_a86f673db1a64324ffec360caa9219e70}} 
+{\bfseries abc\+\_\+letters}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_motifs_1_1_motifs_afdc227a9075e13a837df300cfb3695be}\label{class_motifs_1_1_motifs_afdc227a9075e13a837df300cfb3695be}} 
+\index{Motifs.Motifs@{Motifs.Motifs}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Motifs.\+Motifs.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{list}]{list\+\_\+seq,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Class that allows creating and displaying probabilistic profiles (PWM or PSSM) and
+other functions (? se ficar muito grande tira-se: calculate the probability of a sequence and
+calculate the most probable sequence of the profile created.)
+
+Parameters
+----------
+list_seq : list
+    Sequences of DNA, RNA or AMINO ACIS
+
+kwargs: dictionary
+    May take as keys:
+        profile -- pseudo
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_motifs_1_1_motifs_a7e77190f9255d68430601f35a7ae8f73}\label{class_motifs_1_1_motifs_a7e77190f9255d68430601f35a7ae8f73}} 
+\index{Motifs.Motifs@{Motifs.Motifs}!create\_profile@{create\_profile}}
+\index{create\_profile@{create\_profile}!Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsubsection{\texorpdfstring{create\_profile()}{create\_profile()}}
+{\footnotesize\ttfamily  list Motifs.\+Motifs.\+create\+\_\+profile (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculates the probabilistic PWM (Position Weighted Matrix) or PSSM (Position Specific Scoring Matrix) profile of a given list of **DNA** sequences.
+Default pseudocount of 0
+
+Returns
+-------
+matrix : list
+    It returns list with a dictionary of the probabilistic profile (PWM or PSSM)
+
+Raises
+------
+TypeError
+    If the profile selected isn't pwm or pssm
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_motifs_1_1_motifs_a98b394cc2eaf2402ee6a6b23b5e0e977}\label{class_motifs_1_1_motifs_a98b394cc2eaf2402ee6a6b23b5e0e977}} 
+\index{Motifs.Motifs@{Motifs.Motifs}!print\_profile@{print\_profile}}
+\index{print\_profile@{print\_profile}!Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsubsection{\texorpdfstring{print\_profile()}{print\_profile()}}
+{\footnotesize\ttfamily  repr Motifs.\+Motifs.\+print\+\_\+profile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{list}]{profile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints a probabilistic profile legibly
+
+Parameters
+----------
+profile : list
+    
+
+Returns
+-------
+repr
+    A pretty way of showing the probabilistic profile
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_motifs_1_1_motifs_a7664329b2021b327e17106c43ee2ca6d}\label{class_motifs_1_1_motifs_a7664329b2021b327e17106c43ee2ca6d}} 
+\index{Motifs.Motifs@{Motifs.Motifs}!prob\_seq@{prob\_seq}}
+\index{prob\_seq@{prob\_seq}!Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsubsection{\texorpdfstring{prob\_seq()}{prob\_seq()}}
+{\footnotesize\ttfamily  float Motifs.\+Motifs.\+prob\+\_\+seq (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{seq,  }\item[{list}]{profile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculates and returns the probability of a given sequence by the associated profile
+
+Parameters
+----------
+seq : str
+    Sequence of DNA, RNA or AMINO ACIDS
+profile : list
+    List with a dictionary of the probabilistic profile (PWM or PSSM)
+
+Returns
+-------
+p : float
+    A float number representative of the probability of the given sequence
+
+Raises
+------
+TypeError
+    If the profile selected isn't pwm or pssm
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_motifs_1_1_motifs_afbee5cee6f3cea2a43bbaadc15c24c7b}\label{class_motifs_1_1_motifs_afbee5cee6f3cea2a43bbaadc15c24c7b}} 
+\index{Motifs.Motifs@{Motifs.Motifs}!seq\_most\_probable@{seq\_most\_probable}}
+\index{seq\_most\_probable@{seq\_most\_probable}!Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsubsection{\texorpdfstring{seq\_most\_probable()}{seq\_most\_probable()}}
+{\footnotesize\ttfamily  str Motifs.\+Motifs.\+seq\+\_\+most\+\_\+probable (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{seq,  }\item[{list}]{profile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculates the probability of each subsequence of a given sequence, and returns the subsequence with the highest probability according to the associated profile
+
+Parameters
+----------
+seq : str
+    Sequence of DNA, RNA or AMINO ACIDS
+profile : list
+    List with a dictionary of the probabilistic profile (PWM or PSSM)
+
+Returns
+-------
+str
+    Subsequence with the highest probability
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_motifs_1_1_motifs_a4391ddc80174d19c6844c7543d515501}\label{class_motifs_1_1_motifs_a4391ddc80174d19c6844c7543d515501}} 
+\index{Motifs.Motifs@{Motifs.Motifs}!validate\_abc@{validate\_abc}}
+\index{validate\_abc@{validate\_abc}!Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsubsection{\texorpdfstring{validate\_abc()}{validate\_abc()}}
+{\footnotesize\ttfamily  str Motifs.\+Motifs.\+validate\+\_\+abc (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Through the Sequences Class, it validates if all the sequences of a given list are of the same type, be it DNA, RNA or PROTEIN (AMINO).
+If any sequence is not recognized or of the same type, an Error is displayed
+
+Returns
+-------
+str
+    Sequence of DNA, RNA or AMINO ACIDS
+
+Raises
+------
+TypeError
+    None of the sequences are of the same type
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_motifs_1_1_motifs_ab0d2bdc9fe55b2f1d1814896f9fde2db}\label{class_motifs_1_1_motifs_ab0d2bdc9fe55b2f1d1814896f9fde2db}} 
+\index{Motifs.Motifs@{Motifs.Motifs}!validate\_seq@{validate\_seq}}
+\index{validate\_seq@{validate\_seq}!Motifs.Motifs@{Motifs.Motifs}}
+\doxysubsubsection{\texorpdfstring{validate\_seq()}{validate\_seq()}}
+{\footnotesize\ttfamily  str Motifs.\+Motifs.\+validate\+\_\+seq (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{seq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method determines the type of the sequence: DNA, RNA or AMINO ACIDS
+It gives an error if the sequence is not recognized.
+
+Parameters
+----------
+seq : str
+    Sequence of DNA, RNA or AMINO ACIDS
+
+Returns
+-------
+str: str
+    Type of the sequence ('DNA', 'RNA' or 'AMINO')
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Motifs.\+py\end{DoxyCompactItemize}

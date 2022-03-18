@@ -1,0 +1,91 @@
+\hypertarget{class_progressive_alignment_1_1_progressive_alignment}{}\doxysection{Progressive\+Alignment.\+Progressive\+Alignment Class Reference}
+\label{class_progressive_alignment_1_1_progressive_alignment}\index{ProgressiveAlignment.ProgressiveAlignment@{ProgressiveAlignment.ProgressiveAlignment}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_progressive_alignment_1_1_progressive_alignment_a5ac4278f49c762750b1013d4dae38abb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, list list\+\_\+seqs, $\ast$$\ast$kwargs)
+\item 
+str \mbox{\hyperlink{class_progressive_alignment_1_1_progressive_alignment_af577dfa7c4b4ed4a17705ea1a1ca1403}{consensus}} (self, str s1, str s2)
+\item 
+def \mbox{\hyperlink{class_progressive_alignment_1_1_progressive_alignment_ad21d289353b5ed1ef1e5d845e0407813}{progressive}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_a208fc3e4eef7b38a2e9bea51afb91958}\label{class_progressive_alignment_1_1_progressive_alignment_a208fc3e4eef7b38a2e9bea51afb91958}} 
+{\bfseries list\+\_\+seqs}
+\item 
+\mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_a2e03507e67cfc22a4048201f78188512}\label{class_progressive_alignment_1_1_progressive_alignment_a2e03507e67cfc22a4048201f78188512}} 
+{\bfseries profile}
+\item 
+\mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_abfcfa8b74efce95b2fe4b4c5577a011e}\label{class_progressive_alignment_1_1_progressive_alignment_abfcfa8b74efce95b2fe4b4c5577a011e}} 
+{\bfseries pseudo}
+\item 
+\mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_ad27a390c90b3fcf83412ae7acc43b693}\label{class_progressive_alignment_1_1_progressive_alignment_ad27a390c90b3fcf83412ae7acc43b693}} 
+{\bfseries dic}
+\item 
+\mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_a8d288650cde45f77d91438d827b222d3}\label{class_progressive_alignment_1_1_progressive_alignment_a8d288650cde45f77d91438d827b222d3}} 
+{\bfseries abc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_a5ac4278f49c762750b1013d4dae38abb}\label{class_progressive_alignment_1_1_progressive_alignment_a5ac4278f49c762750b1013d4dae38abb}} 
+\index{ProgressiveAlignment.ProgressiveAlignment@{ProgressiveAlignment.ProgressiveAlignment}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!ProgressiveAlignment.ProgressiveAlignment@{ProgressiveAlignment.ProgressiveAlignment}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Progressive\+Alignment.\+Progressive\+Alignment.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{list}]{list\+\_\+seqs,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Multiple Alignment for a list of sequences (heuristic method?)
+
+Parameters
+----------
+list_seqs : list
+    List of the multiple alignments (DNA or Amino Acid)
+
+kwargs: dictionary
+    May take as keys:
+        profile -- pseudo -- g -- eqs -- diffs
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_af577dfa7c4b4ed4a17705ea1a1ca1403}\label{class_progressive_alignment_1_1_progressive_alignment_af577dfa7c4b4ed4a17705ea1a1ca1403}} 
+\index{ProgressiveAlignment.ProgressiveAlignment@{ProgressiveAlignment.ProgressiveAlignment}!consensus@{consensus}}
+\index{consensus@{consensus}!ProgressiveAlignment.ProgressiveAlignment@{ProgressiveAlignment.ProgressiveAlignment}}
+\doxysubsubsection{\texorpdfstring{consensus()}{consensus()}}
+{\footnotesize\ttfamily  str Progressive\+Alignment.\+Progressive\+Alignment.\+consensus (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{s1,  }\item[{str}]{s2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates an instance of the Class Motif to create a probabilistic profile (PWM) and then creates a sequence consensus between two different sequences.
+
+Parameters
+----------
+s1 : str
+    String sequence of DNA or Amino Acids
+s2 : str
+    String sequence of DNA or Amino Acids
+
+Returns
+-------
+str
+    Sequence consensus
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_progressive_alignment_1_1_progressive_alignment_ad21d289353b5ed1ef1e5d845e0407813}\label{class_progressive_alignment_1_1_progressive_alignment_ad21d289353b5ed1ef1e5d845e0407813}} 
+\index{ProgressiveAlignment.ProgressiveAlignment@{ProgressiveAlignment.ProgressiveAlignment}!progressive@{progressive}}
+\index{progressive@{progressive}!ProgressiveAlignment.ProgressiveAlignment@{ProgressiveAlignment.ProgressiveAlignment}}
+\doxysubsubsection{\texorpdfstring{progressive()}{progressive()}}
+{\footnotesize\ttfamily def Progressive\+Alignment.\+Progressive\+Alignment.\+progressive (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates an instance of the Class Alinhament and it uses the method consensus for creating multiple alignments with the list of sequences.
+It repeats the multiple alignment with the final sequences and consensus.
+
+Returns
+-------
+list_align: list
+    List of the multiple alignments
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Progressive\+Alignment.\+py\end{DoxyCompactItemize}

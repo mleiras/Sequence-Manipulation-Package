@@ -1,0 +1,149 @@
+\hypertarget{class_blast_1_1_blast}{}\doxysection{Blast.\+Blast Class Reference}
+\label{class_blast_1_1_blast}\index{Blast.Blast@{Blast.Blast}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_blast_1_1_blast_af7546a6ca2eec5ec7a68295d69af81ef}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str seq, str query, int w)
+\item 
+dict \mbox{\hyperlink{class_blast_1_1_blast_ad6f4e4f5b7c1bb68812b862b22a0771a}{query\+\_\+map}} (self, query=None, w=None)
+\item 
+list \mbox{\hyperlink{class_blast_1_1_blast_afc1c31c4bda89b9bfc1b2ab827e16c28}{hits}} (self, qm=None, seq=None)
+\item 
+tuple \mbox{\hyperlink{class_blast_1_1_blast_a4b5e3492d4fdaa494b84edec54599dd7}{extend\+\_\+hit}} (self, list index, query=None, seq=None, w=None)
+\item 
+tuple \mbox{\hyperlink{class_blast_1_1_blast_a50d7b3899ab5e1d650209c139d31abf7}{best\+\_\+hit}} (self, \mbox{\hyperlink{class_blast_1_1_blast_afc1c31c4bda89b9bfc1b2ab827e16c28}{hits}}=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_blast_1_1_blast_a73c4092be16e8163bdc67976db8dbb16}\label{class_blast_1_1_blast_a73c4092be16e8163bdc67976db8dbb16}} 
+{\bfseries seq}
+\item 
+\mbox{\Hypertarget{class_blast_1_1_blast_a2e67e65bb79434015166c791cbad53e2}\label{class_blast_1_1_blast_a2e67e65bb79434015166c791cbad53e2}} 
+{\bfseries query}
+\item 
+\mbox{\Hypertarget{class_blast_1_1_blast_a5e646e9b71f219dfb545299671e61c6e}\label{class_blast_1_1_blast_a5e646e9b71f219dfb545299671e61c6e}} 
+{\bfseries w}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class to perform a Blast between a sequence query, a given sequence and the respective size of the query hits aiming to obtain in the sequence
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_blast_1_1_blast_af7546a6ca2eec5ec7a68295d69af81ef}\label{class_blast_1_1_blast_af7546a6ca2eec5ec7a68295d69af81ef}} 
+\index{Blast.Blast@{Blast.Blast}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Blast.Blast@{Blast.Blast}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Blast.\+Blast.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{seq,  }\item[{str}]{query,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Blast Class simplified that searches good local alignments of a sequence within another sequence based on perfect matches
+
+Parameters
+----------
+seq : str
+    Sequence
+    
+query : str
+    Sequence query  
+    
+w : int
+    It determines the size of the subsequences to search in the seq
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_blast_1_1_blast_a50d7b3899ab5e1d650209c139d31abf7}\label{class_blast_1_1_blast_a50d7b3899ab5e1d650209c139d31abf7}} 
+\index{Blast.Blast@{Blast.Blast}!best\_hit@{best\_hit}}
+\index{best\_hit@{best\_hit}!Blast.Blast@{Blast.Blast}}
+\doxysubsubsection{\texorpdfstring{best\_hit()}{best\_hit()}}
+{\footnotesize\ttfamily  tuple Blast.\+Blast.\+best\+\_\+hit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{hits = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the best extension of hit
+
+Parameters
+----------
+hits: list
+    Coordinates of query subsequences in the query and sequence
+
+Returns
+----------
+index[0], index[1], size_max, score_max: tuple
+    Returns respectively index of the best hit in the query, in the sequence, max size of the hit, and the best hit score
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_blast_1_1_blast_a4b5e3492d4fdaa494b84edec54599dd7}\label{class_blast_1_1_blast_a4b5e3492d4fdaa494b84edec54599dd7}} 
+\index{Blast.Blast@{Blast.Blast}!extend\_hit@{extend\_hit}}
+\index{extend\_hit@{extend\_hit}!Blast.Blast@{Blast.Blast}}
+\doxysubsubsection{\texorpdfstring{extend\_hit()}{extend\_hit()}}
+{\footnotesize\ttfamily  tuple Blast.\+Blast.\+extend\+\_\+hit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{list}]{index,  }\item[{}]{query = {\ttfamily None},  }\item[{}]{seq = {\ttfamily None},  }\item[{}]{w = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a tuple with the index of the beginning of the extended hit in the query, in the sequence, the respective size, and number of matches
+
+Parameters
+----------
+index : list
+    Specific hit to be extended in each direction
+
+query: str
+    Sequence query
+    
+seq: str
+    Sequence
+
+w: int
+    It determines the size of the subsequences to search in the seq
+
+Returns
+----------
+ind_query_left, ind_seq_left, len(seq_final), cont_final: tuple
+    Returns respectively index of the extended hit in the query, in the sequence, size of the hit, and the respective number of matches
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_blast_1_1_blast_afc1c31c4bda89b9bfc1b2ab827e16c28}\label{class_blast_1_1_blast_afc1c31c4bda89b9bfc1b2ab827e16c28}} 
+\index{Blast.Blast@{Blast.Blast}!hits@{hits}}
+\index{hits@{hits}!Blast.Blast@{Blast.Blast}}
+\doxysubsubsection{\texorpdfstring{hits()}{hits()}}
+{\footnotesize\ttfamily  list Blast.\+Blast.\+hits (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{qm = {\ttfamily None},  }\item[{}]{seq = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a tuple list with the coordinates of the query subsequences in the query and in the given sequence
+
+Parameters
+----------
+qm : dict
+    Query subsequences with the corresponding indexes in the query
+    
+seq: str
+    Sequence serving as a template to search the indexes
+
+Returns
+----------
+hits: list
+    Tuple list with the first member of the tuple being the coordinate in the query and the second in the given sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_blast_1_1_blast_ad6f4e4f5b7c1bb68812b862b22a0771a}\label{class_blast_1_1_blast_ad6f4e4f5b7c1bb68812b862b22a0771a}} 
+\index{Blast.Blast@{Blast.Blast}!query\_map@{query\_map}}
+\index{query\_map@{query\_map}!Blast.Blast@{Blast.Blast}}
+\doxysubsubsection{\texorpdfstring{query\_map()}{query\_map()}}
+{\footnotesize\ttfamily  dict Blast.\+Blast.\+query\+\_\+map (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query = {\ttfamily None},  }\item[{}]{w = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a dictionary where the keys are the subsequences of the query with size W and the keys are the indexes 
+
+Parameters
+----------
+query: str
+    Query sequence serving as a template to find the indexes
+
+w: int
+    Size each subsequence must have
+
+Returns
+----------
+qm: dict
+    Query subsequences with the corresponding indexes
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Blast.\+py\end{DoxyCompactItemize}

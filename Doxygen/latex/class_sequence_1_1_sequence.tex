@@ -1,0 +1,296 @@
+\hypertarget{class_sequence_1_1_sequence}{}\doxysection{Sequence.\+Sequence Class Reference}
+\label{class_sequence_1_1_sequence}\index{Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_sequence_1_1_sequence_a3beaad432ad2150921958f1565bdce67}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str seq)
+\item 
+str \mbox{\hyperlink{class_sequence_1_1_sequence_a71deef763cb8667bf6de483b8761144e}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+dict \mbox{\hyperlink{class_sequence_1_1_sequence_a7fc202a3b11c20eb92dc9a6ced4940b6}{percentage}} (self)
+\item 
+str \mbox{\hyperlink{class_sequence_1_1_sequence_a3f2689a490499c19136bcfc1b5f020a7}{ind\+\_\+percentage}} (self, str n)
+\item 
+str \mbox{\hyperlink{class_sequence_1_1_sequence_a488f38ffad161e159131d05504762558}{transcription}} (self)
+\item 
+tuple \mbox{\hyperlink{class_sequence_1_1_sequence_a2ee37c32854ce9b99e28741ce83e10dd}{vow\+\_\+cons}} (self)
+\item 
+str \mbox{\hyperlink{class_sequence_1_1_sequence_a74d1a60eaed0545920d3dc8d0da57e66}{comp\+\_\+inverse}} (self)
+\item 
+str \mbox{\hyperlink{class_sequence_1_1_sequence_a7027d6ca23a1c7bda303f7e913fddcdc}{c\+DNA}} (self)
+\item 
+dict \mbox{\hyperlink{class_sequence_1_1_sequence_aa3bf77fcb149c2388949efa7b483f864}{get\+\_\+orfs}} (self)
+\item 
+list \mbox{\hyperlink{class_sequence_1_1_sequence_a11da788e58ca8280868ca3cdc23122e9}{get\+\_\+codons}} (self)
+\item 
+str \mbox{\hyperlink{class_sequence_1_1_sequence_a2a4d792acc1792c6f4ee164f55ab7323}{translation}} (self)
+\item 
+list \mbox{\hyperlink{class_sequence_1_1_sequence_a75968488b56565bcad7f5ae36c44c9fc}{get\+\_\+all\+\_\+prots}} (self)
+\item 
+dict \mbox{\hyperlink{class_sequence_1_1_sequence_a87d523fd4fd89d9067c83b1c7613e2e5}{get\+\_\+aa\+\_\+orfs}} (self)
+\item 
+dict \mbox{\hyperlink{class_sequence_1_1_sequence_afa5059170398d382c0251438f1f8dc4e}{get\+\_\+all\+\_\+prots\+\_\+orfs}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sequence_1_1_sequence_aa710db77af6c0d51f0b8dd063e1bc7a3}\label{class_sequence_1_1_sequence_aa710db77af6c0d51f0b8dd063e1bc7a3}} 
+{\bfseries seq}
+\item 
+\mbox{\Hypertarget{class_sequence_1_1_sequence_ac5a3884fe611f378f2891ab87b561a3e}\label{class_sequence_1_1_sequence_ac5a3884fe611f378f2891ab87b561a3e}} 
+{\bfseries check}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sequence_1_1_sequence_a3beaad432ad2150921958f1565bdce67}\label{class_sequence_1_1_sequence_a3beaad432ad2150921958f1565bdce67}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Sequence.\+Sequence.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{seq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verifies and capitalizes the sequence inputted by the user implementing an error in case the sequence submitted is invalid
+
+Parameters
+------------
+seq: str
+    Sequence inputted by the user
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sequence_1_1_sequence_a71deef763cb8667bf6de483b8761144e}\label{class_sequence_1_1_sequence_a71deef763cb8667bf6de483b8761144e}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily  str Sequence.\+Sequence.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Writing the string with the sequence and its type
+
+Returns
+------------
+str
+    String with the information of the object
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a7027d6ca23a1c7bda303f7e913fddcdc}\label{class_sequence_1_1_sequence_a7027d6ca23a1c7bda303f7e913fddcdc}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!cDNA@{cDNA}}
+\index{cDNA@{cDNA}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{cDNA()}{cDNA()}}
+{\footnotesize\ttfamily  str Sequence.\+Sequence.\+c\+DNA (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a dictionary with all the characters and corresponding replaces and then implementing on a new string
+Only executes in case the object is a RNA sequence
+
+Parameters
+----------
+seq: str
+    RNA sequence  
+
+Returns
+------------
+new: str
+    Returns the string that represents the complementary DNA of the original object sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a74d1a60eaed0545920d3dc8d0da57e66}\label{class_sequence_1_1_sequence_a74d1a60eaed0545920d3dc8d0da57e66}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!comp\_inverse@{comp\_inverse}}
+\index{comp\_inverse@{comp\_inverse}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{comp\_inverse()}{comp\_inverse()}}
+{\footnotesize\ttfamily  str Sequence.\+Sequence.\+comp\+\_\+inverse (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Inversion and complementarity of the sequence
+Only executes in case the object is a DNA sequence
+
+Parameters
+----------
+seq: str
+    DNA sequence
+
+Returns
+------------
+str
+    String corresponding to the inverse and complement of the original object sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a87d523fd4fd89d9067c83b1c7613e2e5}\label{class_sequence_1_1_sequence_a87d523fd4fd89d9067c83b1c7613e2e5}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!get\_aa\_orfs@{get\_aa\_orfs}}
+\index{get\_aa\_orfs@{get\_aa\_orfs}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{get\_aa\_orfs()}{get\_aa\_orfs()}}
+{\footnotesize\ttfamily  dict Sequence.\+Sequence.\+get\+\_\+aa\+\_\+orfs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a dictionary with all the ORFs and the corresponding chain of amino acids
+Transforms codons into amino acids through a dictionary with the relevant information
+Only executes in case the object is a DNA sequence
+
+Parameters
+----------
+seq: str
+    DNA sequence     
+
+Returns
+------------
+orfs_aa: dict
+    Returns a dictionary with the ORFs and amino acid chain
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a75968488b56565bcad7f5ae36c44c9fc}\label{class_sequence_1_1_sequence_a75968488b56565bcad7f5ae36c44c9fc}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!get\_all\_prots@{get\_all\_prots}}
+\index{get\_all\_prots@{get\_all\_prots}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{get\_all\_prots()}{get\_all\_prots()}}
+{\footnotesize\ttfamily  list Sequence.\+Sequence.\+get\+\_\+all\+\_\+prots (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a list with all the existing and possible proteins in the sequence. The sequence can be proteic or DNA
+Only executes in case the object is a DNA or AMINO sequence
+
+Parameters
+----------
+seq : str
+    DNA or amino sequence
+
+Returns
+------------
+list_prots: list
+    Returns a list with all the proteins in the sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_afa5059170398d382c0251438f1f8dc4e}\label{class_sequence_1_1_sequence_afa5059170398d382c0251438f1f8dc4e}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!get\_all\_prots\_orfs@{get\_all\_prots\_orfs}}
+\index{get\_all\_prots\_orfs@{get\_all\_prots\_orfs}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{get\_all\_prots\_orfs()}{get\_all\_prots\_orfs()}}
+{\footnotesize\ttfamily  dict Sequence.\+Sequence.\+get\+\_\+all\+\_\+prots\+\_\+orfs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a dictionary with all the ORFs and the corresponding list with all the existing and possible proteins in the sequence ORF
+Only executes in case the object is a DNA sequence
+
+Parameters
+----------
+seq: str
+    DNA sequence  
+
+Returns
+------------
+orfs_prot: dict
+    Returns a dictionary with the ORFs and possible proteins
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a11da788e58ca8280868ca3cdc23122e9}\label{class_sequence_1_1_sequence_a11da788e58ca8280868ca3cdc23122e9}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!get\_codons@{get\_codons}}
+\index{get\_codons@{get\_codons}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{get\_codons()}{get\_codons()}}
+{\footnotesize\ttfamily  list Sequence.\+Sequence.\+get\+\_\+codons (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Obtaining of all the codons for the ORF +1
+Only executes in case the object is a DNA sequence
+
+Parameters
+----------
+seq: str
+    DNA sequence
+
+Returns
+------------
+list
+    List with all the codons of the sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_aa3bf77fcb149c2388949efa7b483f864}\label{class_sequence_1_1_sequence_aa3bf77fcb149c2388949efa7b483f864}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!get\_orfs@{get\_orfs}}
+\index{get\_orfs@{get\_orfs}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{get\_orfs()}{get\_orfs()}}
+{\footnotesize\ttfamily  dict Sequence.\+Sequence.\+get\+\_\+orfs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a dictionary with all the 6 orfs (3 of each chain)
+Only executes in case the object is a DNA sequence
+
+Parameters
+----------
+seq: str
+    DNA sequence of which we want to know the reading frames (orfs)
+       
+Returns
+------------
+orfs: dict
+    Returns the dictionary with each orf and the corresponding list of codons
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a3f2689a490499c19136bcfc1b5f020a7}\label{class_sequence_1_1_sequence_a3f2689a490499c19136bcfc1b5f020a7}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!ind\_percentage@{ind\_percentage}}
+\index{ind\_percentage@{ind\_percentage}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{ind\_percentage()}{ind\_percentage()}}
+{\footnotesize\ttfamily  str Sequence.\+Sequence.\+ind\+\_\+percentage (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{n }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Iterates over the dictionary with the characters and percentages
+
+Returns
+------------
+str
+    Percentage of the character introduced in the object sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a7fc202a3b11c20eb92dc9a6ced4940b6}\label{class_sequence_1_1_sequence_a7fc202a3b11c20eb92dc9a6ced4940b6}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!percentage@{percentage}}
+\index{percentage@{percentage}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{percentage()}{percentage()}}
+{\footnotesize\ttfamily  dict Sequence.\+Sequence.\+percentage (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construction of a dictionary with the elements of the sequence and corresponding percentage
+
+Returns
+------------
+count: dict
+    Dictionary with the characters and percentage
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a488f38ffad161e159131d05504762558}\label{class_sequence_1_1_sequence_a488f38ffad161e159131d05504762558}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!transcription@{transcription}}
+\index{transcription@{transcription}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{transcription()}{transcription()}}
+{\footnotesize\ttfamily  str Sequence.\+Sequence.\+transcription (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Replacing of the thymine base 'T' for the uracil base 'U'
+Only executes in case the object is a DNA sequence
+
+Parameters
+----------
+str
+    DNA sequence
+
+Returns
+------------
+str
+    RNA sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a2a4d792acc1792c6f4ee164f55ab7323}\label{class_sequence_1_1_sequence_a2a4d792acc1792c6f4ee164f55ab7323}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!translation@{translation}}
+\index{translation@{translation}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily  str Sequence.\+Sequence.\+translation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Obtaining the sequence codons and building an amino acid chain across the codons
+Transforms codons into amino acids through a dictionary with the relevant information
+Only executes in case the object is a DNA sequence
+
+Parameters
+----------
+seq: str
+    DNA sequence
+
+Returns
+------------
+aa: str
+    Amino acid chain string resulting from the translation of the DNA sequence
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_sequence_1_1_sequence_a2ee37c32854ce9b99e28741ce83e10dd}\label{class_sequence_1_1_sequence_a2ee37c32854ce9b99e28741ce83e10dd}} 
+\index{Sequence.Sequence@{Sequence.Sequence}!vow\_cons@{vow\_cons}}
+\index{vow\_cons@{vow\_cons}!Sequence.Sequence@{Sequence.Sequence}}
+\doxysubsubsection{\texorpdfstring{vow\_cons()}{vow\_cons()}}
+{\footnotesize\ttfamily  tuple Sequence.\+Sequence.\+vow\+\_\+cons (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculation of the vowels and consonants of a sequence
+
+Parameters
+----------
+seq: str
+    Sequence
+
+Returns
+------------
+vowels, consonants: tuple
+    Number of vowels and consonants of the sequence
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sequence.\+py\end{DoxyCompactItemize}
