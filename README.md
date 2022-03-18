@@ -23,7 +23,7 @@ The class Sequence provides a set of sequence features, such as the type of sequ
 **The parameters are:**
 - seq: sequence.
 
-#### Usage Example
+##### Usage Example
 An example of the get_all_prots function (which returns all the proteins from the sequence) of the class Sequence is:
 ```
 seq_dna = Sequence('ATGTTAGAGTTATTAAAAAGTCTGGTATTCGCCGTAATCATGGTACCTGTCGTGATGGCCATCATCCTGGGTCTGATTTACGGTCTTGGTGAAGTATTCAACATCTTTTCTGGTGTTGGTAAAAAAGACCAGCCCGGACAAAATCATTGAATTTAATTACAAGTCTTCAGAATGCCAGAGATATACAGGATCTAACCA')
@@ -43,6 +43,18 @@ The class Alignment constructs local and global alignments using a blosum62 matr
 - ties: takes False argument as default and indicates if we should assume the ties in the matrix or not;
 - i: position that will correspond to the position to be incremented on the lists
 - x, y: coordinates to begin the recursive function in the matrix and correctly implement in the lists the alignments.
+
+##### Usage Example
+An example of the align_seq function (which returns all possible alignments) of the class Alignment is:
+```
+example = Alignment("LGPSGCASGIWTKSA", "TGPSGGSRIWTKSG", blosum62 = True, g = -8) print( example .align_seq())
+```
+An output example of the function is:
+```
+Alignment:
+LGPSGCASGIWTKSA
+TGPSG-GSRIWTKSG
+```
 
 ### Class Blast
 This section is represented by 4 classes that may interact with each other. The classes and respective parameters (in order of appearance) are:
@@ -75,6 +87,37 @@ This section is represented by 4 classes that may interact with each other. The 
 ● hits: coordinates of query subsequences;
 ● w: size of the subsequences.
 
+
+##### Usage Example
+An example of the hits function (which returns the coordinates of the query subsequences) of the class Blast is:
+
+```
+example = Blast('GGGCCGATAAGTGATCAGGTAGCTA', 'GGT', 2)
+print(example.query_map())
+print(example.hits())
+print(example.best_hit())
+```
+An output example of the function is:
+```
+{'GG': [0], 'GT': [1]}
+[(0, 0), (0, 1), (0, 17), (1, 10), (1, 18)]
+(0, 17, 3, 3)
+```
+
+An example of the get_hits (which returns the hits of an specific sequence and inserted query) and best_alignment (which returns the sequence that has the best match for the query) functions of the class SimpleBlast is:
+
+```
+example_list = ["HSGVYLDDRDKPHFQDLNSFILDMSNNQRD", "RFIIQTPYVRWKQRPEFWYPYEFEAVQTNS", "MTNQNHEVCHFYMCIFMLFIHQKKSSPYLS", "GYLWHCKTPNNMFSMPQLENCSYPEFMMQP", "ERKMIDFCCCAIHYGKFDAQEWHSEVSHVP", "WEWSGWDWANIVRSGQHWPGDCRFVNMQDC", "QTQDATVFWCCMQKIETYLYQWFLENYFRL", "DRPHEHSDSDTEAPYACITHSKQVDANDSQ", "TMCCVWDYFSVNEDRRLIQQNPYEVEHELC", "KQEDMQDLNAMLVSWLACIYEAIRWALGWI"]
+exemplo = SimpleBlast(example_list, 3)
+print(exemplo.get_hits('HSGVYLDDRDKPHFQDLNSFILDMSNNQRD', 'YLDCTQPWIAKVMPA'))
+print(exemplo.best_alignment('YLDCTQPWIAKVMPA'))
+```
+An output example of the functions is:
+```
+[(0, 4)]
+HSGVYLDDRDKPHFQDLNSFILDMSNNQRD
+```
+
 ### Class Motifs 
 The class Motifs creates and displays probabilistic profiles through Position Weight Matrices (PWM) and/or Position-Specific Scoring Matrices (PSSM). This class has the following parameters:
 - list_seq: list of sequences;
@@ -82,9 +125,34 @@ The class Motifs creates and displays probabilistic profiles through Position We
 - seq: sequence;
 - profile: dictionary of the probabilistic profile (PWM or PSSM).
 
+##### Usage Example
+An example of the prob_seq (which returns the the probability of a given sequence) and seq_most_probable (which returns the sequence with the highest probability) functions of the class Motifs is:
+```
+example = Motifs(['FLIMVSPTAY_HQ', 'NKDECWRG','NKDEGAGAG','FMVSPFA'], pseudo = 0.5, profile = 'pssm')
+pwm = example.create_profile()
+print(example.prob_seq('FLIGMVG', pwm))
+print(example.seq_most_probable('FLK_IGVKAMVK', pwm))
+```
+An output example of the functions is:
+```
+3.67883
+K_IGVKA
+```
+
 ### Class Progressive Alignments
 The class Progressive Alignments performs multiple alignments giving a list of sequences. The parameters are:
 - list_seqs: list of the multiple alignments (DNA or Amino Acid);
 - kwargs;
 - s1: sequence of DNA or Amino Acids;
 - s2: sequence of DNA or Amino Acids.
+
+##### Usage Example
+An example of the progressive function (which creates multiple alignments) of the class Progressive Alignments is:
+```
+example = ProgressiveAlignment(['GTTGCACCA', 'GTCAGCA','TTCCCA','GCAGA'])
+print(example.progressive())
+```
+An output example of the function is:
+```
+['GTTGCACCA', 'G-T-CAGCA', '-TT-C-CCA', '---GCA-GA']
+```
