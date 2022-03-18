@@ -1,6 +1,13 @@
 # Sequence Manipulation Package
 The Sequence Manipulation package constitutes a set of classes and functions for biological sequences manipulation available for Python.
 
+## Authors
+Alexandre Esperança pg45963
+Cristiana Albuquerque pg45468
+Maria Couto pg44380
+Mónica Leiras pg45473
+University of Minho, Bioinformatics (Master) 2021/2022
+
 ## What can be found in this package?
 The Sequence Manipulation package has some functionalities such as:
 - Sequence classes that deals with sequences, namely DNA, RNA and amino acid sequences;
